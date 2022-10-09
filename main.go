@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"strconv"
 	"syscall"
 	"time"
 
@@ -20,9 +21,20 @@ import (
 	"github.com/muesli/termenv"
 )
 
-const (
+func getPort() int {
+	port := os.Getenv("PORT")
+
+	if len(port) == 0 {
+		return 2332
+	}
+
+	portInt, _ := strconv.Atoi(port)
+	return portInt
+}
+
+var (
 	host = "0.0.0.0"
-	port = 2332
+	port = getPort()
 )
 
 func main() {
