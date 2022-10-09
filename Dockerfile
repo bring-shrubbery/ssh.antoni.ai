@@ -11,6 +11,6 @@ COPY data/* ./data/
 
 RUN go build -o ssh-antoni
 
-EXPOSE 22
+EXPOSE 23234
 
 CMD [ "./ssh-antoni" ]
