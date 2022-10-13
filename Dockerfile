@@ -11,8 +11,8 @@ COPY data/* ./data/
 
 RUN go build -o ssh-antoni
 
-ENV PORT 2332
+ENV PORT 22
 
-EXPOSE 2332/tcp
+EXPOSE 22/tcp
 
 CMD [ "./ssh-antoni" ]
