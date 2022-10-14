@@ -13,6 +13,4 @@ RUN go build -o ssh-antoni
 
 ENV PORT 22
 
-EXPOSE 22/tcp
-
 CMD [ "./ssh-antoni" ]
