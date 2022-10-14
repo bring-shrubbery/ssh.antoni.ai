@@ -2,6 +2,6 @@ version: "3.3"
 
 services:
   antoni:
-    image: bringshrubbery/ssh-antoni-ai:0.0.1
+    image: bringshrubbery/ssh-antoni-ai:0.0.2
     ports:
-      - "22:2332"
+      - "9999:22"
