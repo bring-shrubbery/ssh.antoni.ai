@@ -22,4 +22,7 @@ go.work
 
 .ssh
 
+ssh-antoni-ai
 ssh.antoni.ai
+
+dist/

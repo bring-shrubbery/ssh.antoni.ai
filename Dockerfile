@@ -1,16 +1,15 @@
 FROM golang:1.19-alpine
 
+ENV PORT 22
+ENV GOOS=linux
+ENV GOARCH=arm64
+
 WORKDIR /app
 
-COPY go.mod ./
-COPY go.sum ./
+COPY . .
+
 RUN go mod download
 
-COPY *.go ./
-COPY data/* ./data/
+RUN go build -o ssh-antoni-ai .
 
-RUN go build -o ssh-antoni
-
-ENV PORT 22
-
-CMD [ "./ssh-antoni" ]
+CMD [ "./ssh-antoni-ai" ]
