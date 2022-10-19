@@ -3,5 +3,5 @@
 ## How to..
 
 1. Open your terminal
-2. Run `ssh antoni.ai`
+2. Run `ssh cv.antoni.ai`
 3. Let me know what you think! 🤪
